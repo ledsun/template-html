@@ -43,7 +43,7 @@ if (argv.v || argv.version) {
 
   files.forEach(function (file) {
     var content = template.processFile(file);
-    var filepath = path.resolve(output, path.basename(file));
+    var filepath = path.resolve(output, file);
 
     fs.mkdir(output, function () {
       fs.writeFile(filepath, content);
